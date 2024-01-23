@@ -74,11 +74,12 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                           child: Container(
                             width: 100, // Set your desired width
                             height: 35, // Set your desired height
-                            decoration: const BoxDecoration(
-                              color: Colors.orange,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(
-                                    8), // Adjust the radius as needed
+                            decoration: BoxDecoration(
+                              color: itemCount == 0
+                                  ? Colors.orange
+                                  : const Color.fromRGBO(58, 58, 58, 1),
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(8),
                               ),
                             ),
                             child: itemCount == 0
@@ -86,31 +87,35 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
                                     children: [
+                                      const CustomSingleTextWidget(
+                                        label: "Add",
+                                        color: Colors.white,
+                                        size: 15,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                      const SizedBox(width: 30),
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
                                             itemCount++;
                                           });
                                         },
-                                        child: const CustomSingleTextWidget(
-                                          label: "Add",
-                                          color: Colors.white,
-                                          size: 15,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                      ),
-                                      const SizedBox(width: 30),
-                                      Container(
-                                        width: 30,
-                                        height: 30,
-                                        decoration: const BoxDecoration(
-                                          color: Colors.white,
-                                          shape: BoxShape.rectangle,
-                                        ),
-                                        child: const Center(
-                                          child: Icon(
-                                            Icons.add,
-                                            color: Colors.black,
+                                        child: Container(
+                                          width: 30,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            shape: BoxShape.rectangle,
+                                            border: Border.all(
+                                              color: Colors.white,
+                                              width: 2,
+                                            ),
+                                          ),
+                                          child: const Center(
+                                            child: Icon(
+                                              Icons.add,
+                                              color: Colors.black,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -126,20 +131,43 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                             itemCount--;
                                           });
                                         },
-                                        child: const CustomSingleTextWidget(
-                                          label: "Sub",
-                                          color: Colors.white,
-                                          size: 15,
-                                          fontWeight: FontWeight.normal,
+                                        child: Container(
+                                          width: 30,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.rectangle,
+                                            border: Border.all(
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .primary,
+                                              width: 1,
+                                            ),
+                                          ),
+                                          child: const Center(
+                                            child: Icon(
+                                              Icons.remove,
+                                              color: Colors.white,
+                                            ),
+                                          ),
                                         ),
                                       ),
-                                      Text(
-                                        '$itemCount',
-                                        style: const TextStyle(
+                                      Container(
+                                        width: 30,
+                                        height: 30,
+                                        decoration: BoxDecoration(
                                           color: Colors.white,
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.normal,
+                                          shape: BoxShape.rectangle,
+                                          border: Border.all(
+                                            color: Colors.white,
+                                          ),
                                         ),
+                                        child: Center(
+                                            child: CustomSingleTextWidget(
+                                          label: itemCount.toString(),
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.normal,
+                                          size: 15,
+                                        )),
                                       ),
                                       GestureDetector(
                                         onTap: () {
@@ -150,14 +178,19 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                         child: Container(
                                           width: 30,
                                           height: 30,
-                                          decoration: const BoxDecoration(
-                                            color: Colors.white,
+                                          decoration: BoxDecoration(
                                             shape: BoxShape.rectangle,
+                                            border: Border.all(
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .primary,
+                                              width: 1,
+                                            ),
                                           ),
                                           child: const Center(
                                             child: Icon(
                                               Icons.add,
-                                              color: Colors.black,
+                                              color: Colors.white,
                                             ),
                                           ),
                                         ),
