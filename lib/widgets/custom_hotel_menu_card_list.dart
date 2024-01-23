@@ -87,6 +87,7 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
                                     children: [
+                                      // Section for "Add" text
                                       const CustomSingleTextWidget(
                                         label: "Add",
                                         color: Colors.white,
@@ -94,6 +95,7 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                         fontWeight: FontWeight.normal,
                                       ),
                                       const SizedBox(width: 30),
+                                      // Section for "+" icon
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
@@ -125,6 +127,7 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
                                     children: [
+                                      // Section for "-" icon
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
@@ -151,6 +154,7 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                           ),
                                         ),
                                       ),
+                                      // Section for count display
                                       Container(
                                         width: 30,
                                         height: 30,
@@ -169,6 +173,7 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                           size: 15,
                                         )),
                                       ),
+                                      // Section for "+" icon
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
