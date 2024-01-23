@@ -14,6 +14,7 @@ class HotelMenuCard extends StatefulWidget {
   final String price;
 
   @override
+  // ignore: library_private_types_in_public_api
   _HotelMenuCardState createState() => _HotelMenuCardState();
 }
 
@@ -30,7 +31,7 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             color: const Color.fromRGBO(58, 58, 58, 1),
             child: SizedBox(
-              height: 120, // Set your desired height
+              height: 110, // Set your desired height
               child: Row(
                 children: [
                   Expanded(
@@ -108,6 +109,8 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                           decoration: BoxDecoration(
                                             color: Colors.white,
                                             shape: BoxShape.rectangle,
+                                            borderRadius:
+                                                BorderRadius.circular(3),
                                             border: Border.all(
                                               color: Colors.white,
                                               width: 2,
@@ -139,6 +142,8 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                           height: 30,
                                           decoration: BoxDecoration(
                                             shape: BoxShape.rectangle,
+                                            borderRadius:
+                                                BorderRadius.circular(3),
                                             border: Border.all(
                                               color: Theme.of(context)
                                                   .colorScheme
@@ -146,10 +151,12 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                               width: 1,
                                             ),
                                           ),
-                                          child: const Center(
+                                          child: Center(
                                             child: Icon(
                                               Icons.remove,
-                                              color: Colors.white,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .primary,
                                             ),
                                           ),
                                         ),
@@ -161,6 +168,8 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                         decoration: BoxDecoration(
                                           color: Colors.white,
                                           shape: BoxShape.rectangle,
+                                          borderRadius:
+                                              BorderRadius.circular(3),
                                           border: Border.all(
                                             color: Colors.white,
                                           ),
@@ -185,6 +194,8 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                           height: 30,
                                           decoration: BoxDecoration(
                                             shape: BoxShape.rectangle,
+                                            borderRadius:
+                                                BorderRadius.circular(3),
                                             border: Border.all(
                                               color: Theme.of(context)
                                                   .colorScheme
@@ -192,10 +203,12 @@ class _HotelMenuCardState extends State<HotelMenuCard> {
                                               width: 1,
                                             ),
                                           ),
-                                          child: const Center(
+                                          child: Center(
                                             child: Icon(
                                               Icons.add,
-                                              color: Colors.white,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .primary,
                                             ),
                                           ),
                                         ),

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:fatfox_app/widgets/custom_container.dart';
 
 class HotelMenu extends StatefulWidget {
+  // ignore: use_key_in_widget_constructors
   const HotelMenu({Key? key});
 
   @override
