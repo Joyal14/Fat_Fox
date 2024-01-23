@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:fatfox_app/on_boading.dart';
+import 'package:fatfox_app/Onboarding/on_boading.dart';
 import 'package:flutter/material.dart';
 
 class Splashscreen extends StatefulWidget {
