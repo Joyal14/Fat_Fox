@@ -1,4 +1,4 @@
-import 'package:fatfox_app/pages/login_page.dart';
+import 'package:fatfox_app/pages/Login/login_page.dart';
 import 'package:fatfox_app/models/content_model.dart';
 import 'package:flutter/material.dart';
 

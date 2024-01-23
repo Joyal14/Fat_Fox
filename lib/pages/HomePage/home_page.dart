@@ -1,7 +1,7 @@
+import 'package:fatfox_app/widgets/card/custom_card.dart';
+import 'package:fatfox_app/widgets/card/custom_product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:fatfox_app/widgets/custom_button.dart';
-import 'package:fatfox_app/widgets/custom_card.dart';
-import 'package:fatfox_app/widgets/custom_product_card.dart';
 import 'package:fatfox_app/widgets/custom_text.dart';
 import 'package:fatfox_app/Gobel/golbel_variable.dart';
 import 'package:fatfox_app/widgets/custom_horizontal.dart';

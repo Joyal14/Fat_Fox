@@ -1,5 +1,5 @@
+import 'package:fatfox_app/widgets/card/custom_hotel_menu_card_list.dart';
 import 'package:flutter/material.dart';
-import 'package:fatfox_app/widgets/custom_hotel_menu_card_list.dart';
 
 class HotelCard extends StatelessWidget {
   final String title;

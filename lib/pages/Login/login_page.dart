@@ -1,18 +1,18 @@
-import 'package:fatfox_app/pages/otp_page.dart';
+import 'package:fatfox_app/pages/Login/registration_page.dart';
 import 'package:fatfox_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:fatfox_app/widgets/text_field_widget.dart';
 import 'package:fatfox_app/widgets/custom_text.dart';
 import 'package:fatfox_app/widgets/custom_button.dart';
 
-class RegistrationPage extends StatefulWidget {
-  const RegistrationPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<RegistrationPage> createState() => _RegistrationPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _RegistrationPageState extends State<RegistrationPage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(
-                  height: 250,
+                  height: 200,
                 ),
                 fatfoximage(),
                 const SizedBox(
@@ -34,7 +34,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 Align(
                     alignment: Alignment.centerLeft,
                     child: CustomText(
-                      label: "Sign up",
+                      label: "Login",
                       color: Theme.of(context).colorScheme.primary,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -43,29 +43,17 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   height: 20,
                 ),
                 const CustomTextField(
-                  hintText: "Enter Name",
-                  inputType: TextInputType.name,
-                  maxLength: 20,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const CustomTextField(
                   hintText: "Enter mobile number",
-                  maxLength: 10,
                   inputType: TextInputType.phone,
+                  maxLength: 10,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 CustomElevatedButton(
                   context: context,
-                  label: "Register Now",
-                  onPressed: () {
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => const OTPPage()),
-                    );
-                  },
+                  label: "Login",
+                  onPressed: () {},
                   color: Theme.of(context).colorScheme.primary,
                 ),
                 const SizedBox(
@@ -74,16 +62,24 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 Row(
                   children: [
                     const CustomText(
-                      label: "Already have an account ?",
+                      label: "Don't have an account ?",
                       color: Colors.white,
                       fontSize: 14,
                       fontWeight: FontWeight.normal,
                     ),
-                    CustomText(
-                      label: " Login",
-                      color: Theme.of(context).colorScheme.primary,
-                      fontSize: 14,
-                      fontWeight: FontWeight.normal,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const RegistrationPage()),
+                        );
+                      },
+                      child: CustomText(
+                        label: " Register",
+                        color: Theme.of(context).colorScheme.primary,
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                     ),
                   ],
                 ),
@@ -98,6 +94,23 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 ),
                 const SizedBox(
                   height: 80,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const CustomText(
+                      label: "Powered By ",
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                    ),
+                    CustomText(
+                      label: "FATFOX",
+                      color: Theme.of(context).colorScheme.primary,
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ],
                 ),
               ],
             ),

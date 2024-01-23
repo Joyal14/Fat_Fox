@@ -1,4 +1,3 @@
-import 'package:fatfox_app/pages/home_page.dart';
 import 'package:fatfox_app/pages/hotel_menu_page.dart';
 // import 'package:fatfox_app/splash.dart';
 import 'package:flutter/material.dart';

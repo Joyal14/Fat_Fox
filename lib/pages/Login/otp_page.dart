@@ -1,4 +1,4 @@
-import 'package:fatfox_app/pages/registration_page.dart';
+import 'package:fatfox_app/pages/Login/registration_page.dart';
 import 'package:fatfox_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:fatfox_app/widgets/text_field_widget.dart';
