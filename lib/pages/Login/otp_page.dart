@@ -1,3 +1,4 @@
+import 'package:fatfox_app/pages/HomePage/home_page.dart';
 import 'package:fatfox_app/pages/Login/registration_page.dart';
 import 'package:fatfox_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -128,7 +129,11 @@ class _OTPPageState extends State<OTPPage> {
                 CustomElevatedButton(
                   context: context,
                   label: "Submit",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                  },
                   color: Theme.of(context).colorScheme.primary,
                 ),
                 const SizedBox(

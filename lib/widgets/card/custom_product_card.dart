@@ -42,8 +42,8 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 8,
-                right: 8,
+                top: 15,
+                right: 0.1,
                 child: Image.asset(image),
               ),
             ],

@@ -34,13 +34,13 @@ class _HotelMenuState extends State<HotelMenu> {
         leading: const Icon(
           Icons.arrow_back_outlined,
           color: Colors.white,
-          size: 30,
+          size: 25,
         ),
         title: const Center(
           child: CustomSingleTextWidget(
               label: "Hotel & Menu",
               color: Colors.white,
-              size: 30,
+              size: 20,
               fontWeight: FontWeight.normal),
         ),
         actions: [
@@ -49,10 +49,11 @@ class _HotelMenuState extends State<HotelMenu> {
             icon: const Icon(
               Icons.search_outlined,
               color: Colors.white,
-              size: 40,
+              size: 25,
             ),
           ),
         ],
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(

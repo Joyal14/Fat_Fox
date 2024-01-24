@@ -5,7 +5,7 @@ final products = [
     'ing': 'Biryani, Hyderabadi, North..',
     'city': 'UDUPI',
     'imageUrl': 'image/ic_fish1.png',
-    'imageIcon': 'image/non_veg.png',
+    'imageIcon': 'image/Non_veg_image.png',
   },
   {
     'id': '1',
@@ -13,7 +13,7 @@ final products = [
     'ing': 'Paneer Tikka, Dal Khichdi, Paneer ...',
     'city': 'UDUPI',
     'imageUrl': 'image/ic_panner.png',
-    'imageIcon': 'image/non_veg.png',
+    'imageIcon': 'image/Pure_veg_image.png',
   },
   {
     'id': '2',
@@ -21,7 +21,7 @@ final products = [
     'ing': 'Biryani, Hyderabadi, North..',
     'city': 'UDUPI',
     'imageUrl': 'image/ic_fish1.png',
-    'imageIcon': 'image/non_veg.png',
+    'imageIcon': 'image/Non_veg_image.png',
   },
   {
     'id': '3',
@@ -29,7 +29,7 @@ final products = [
     'ing': 'Biryani, Hyderabadi, North..',
     'city': 'UDUPI',
     'imageUrl': 'image/ic_panner.png',
-    'imageIcon': 'image/ic_non_veg.png',
+    'imageIcon': 'image/Pure_veg_image.png',
   },
   {
     'id': '4',
@@ -37,7 +37,7 @@ final products = [
     'ing': 'Biryani, Hyderabadi, North..',
     'city': 'UDUPI',
     'imageUrl': 'image/ic_fish1.png',
-    'imageIcon': 'image/ic_non_veg',
+    'imageIcon': 'image/Non_veg_image.png',
   },
 ];
 
@@ -71,5 +71,38 @@ final hotelmenu = [
     'title': 'Chicken Kabab',
     'prices': '₹606',
     'imageUrl': 'image/pizza5.png',
+  },
+];
+
+final cartlists = [
+  {
+    'id': '0',
+    'title': 'Orange Juice',
+    'prices': '₹206',
+    'imageUrl': 'image/juice.png',
+  },
+  {
+    'id': '1',
+    'title': 'Fresh Lime',
+    'prices': '₹300',
+    'imageUrl': 'image/juice2.png',
+  },
+  {
+    'id': '2',
+    'title': 'Orange Juice',
+    'prices': '₹406',
+    'imageUrl': 'image/juice3.png',
+  },
+  {
+    'id': '3',
+    'title': 'Orange Milk Juice',
+    'prices': '₹106',
+    'imageUrl': 'image/juice.png',
+  },
+  {
+    'id': '4',
+    'title': 'Chicken Kabab',
+    'prices': '₹606',
+    'imageUrl': 'image/juice2.png',
   },
 ];

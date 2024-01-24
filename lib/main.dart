@@ -1,4 +1,5 @@
-import 'package:fatfox_app/pages/hotel_menu_page.dart';
+import 'package:fatfox_app/splash.dart';
+
 // import 'package:fatfox_app/splash.dart';
 import 'package:flutter/material.dart';
 // import 'package:fatfox_app/pages/location_page.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HotelMenu(),
+      home: const Splashscreen(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromRGBO(251, 142, 21, 1),

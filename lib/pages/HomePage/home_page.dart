@@ -112,6 +112,7 @@ class _HomePageState extends State<HomePage> {
                           Icons.arrow_forward,
                           color: Colors.white,
                         ),
+                        label: '',
                         color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
@@ -161,16 +162,17 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(height: 10),
             BottomNavigationBar(
-              items: const [
+              items: [
                 BottomNavigationBarItem(
+                  backgroundColor: Color.fromRGBO(122, 116, 116, 1),
                   icon: Icon(
                     Icons.home_outlined,
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.primary,
                     size: 40,
                   ),
                   label: "",
                 ),
-                BottomNavigationBarItem(
+                const BottomNavigationBarItem(
                   icon: Icon(
                     Icons.qr_code_2_outlined,
                     color: Colors.white,
@@ -178,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   label: "",
                 ),
-                BottomNavigationBarItem(
+                const BottomNavigationBarItem(
                   icon: Icon(
                     Icons.card_giftcard_outlined,
                     color: Colors.white,
