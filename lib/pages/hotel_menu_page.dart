@@ -1,4 +1,5 @@
 import 'package:fatfox_app/Gobel/golbel_variable.dart';
+import 'package:fatfox_app/pages/HomePage/home_page.dart';
 import 'package:fatfox_app/widgets/card/custom_hotel_menu_card.dart';
 import 'package:fatfox_app/widgets/custom_horizontal.dart';
 import 'package:fatfox_app/widgets/single_text.dart';
@@ -7,8 +8,11 @@ import 'package:fatfox_app/widgets/custom_container.dart';
 import 'package:fatfox_app/widgets/custom_cart_button.dart';
 
 class HotelMenu extends StatefulWidget {
+  final String title;
+  final String ing;
+
   // ignore: use_key_in_widget_constructors
-  const HotelMenu({Key? key});
+  const HotelMenu({Key? key, required this.title, required this.ing});
 
   @override
   State<HotelMenu> createState() => _HotelMenuState();
@@ -31,10 +35,16 @@ class _HotelMenuState extends State<HotelMenu> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(38, 38, 38, 1),
-        leading: const Icon(
-          Icons.arrow_back_outlined,
-          color: Colors.white,
-          size: 25,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const HomePage()));
+          },
+          child: const Icon(
+            Icons.arrow_back_outlined,
+            color: Colors.white,
+            size: 25,
+          ),
         ),
         title: const Center(
           child: CustomSingleTextWidget(
@@ -72,16 +82,17 @@ class _HotelMenuState extends State<HotelMenu> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 10, vertical: 5),
                             child: CustomSingleTextWidget(
-                                label: "Ritz-Carlton Hotel",
+                                label: widget.title,
                                 color: Theme.of(context).colorScheme.primary,
                                 size: 22,
                                 fontWeight: FontWeight.normal),
                           ),
                           const SizedBox(height: 2),
-                          const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10),
+                          Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
                               child: CustomSingleTextWidget(
-                                  label: "Biryani, Hyderabadi, North..",
+                                  label: widget.ing,
                                   color: Colors.white,
                                   size: 12,
                                   fontWeight: FontWeight.normal)),

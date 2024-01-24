@@ -1,3 +1,4 @@
+import 'package:fatfox_app/pages/hotel_menu_page.dart';
 import 'package:fatfox_app/widgets/card/custom_card.dart';
 import 'package:fatfox_app/widgets/card/custom_product_card.dart';
 import 'package:flutter/material.dart';
@@ -149,13 +150,23 @@ class _HomePageState extends State<HomePage> {
                 itemCount: products.length,
                 itemBuilder: (context, index) {
                   final product = products[index];
-                  return ProductCard(
-                    title: product['title'] as String,
-                    ing: product['ing'] as String,
-                    city: product['city'] as String,
-                    images: product['imageUrl'] as String,
-                    image: product['imageIcon'] as String,
-                    backgroundcolor: const Color.fromARGB(35, 230, 228, 228),
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HotelMenu(
+                                  title: product['title'] as String,
+                                  ing: product['ing'] as String)));
+                    },
+                    child: ProductCard(
+                      title: product['title'] as String,
+                      ing: product['ing'] as String,
+                      city: product['city'] as String,
+                      images: product['imageUrl'] as String,
+                      image: product['imageIcon'] as String,
+                      backgroundcolor: const Color.fromARGB(35, 230, 228, 228),
+                    ),
                   );
                 },
               ),
@@ -164,7 +175,7 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBar(
               items: [
                 BottomNavigationBarItem(
-                  backgroundColor: Color.fromRGBO(122, 116, 116, 1),
+                  backgroundColor: const Color.fromRGBO(122, 116, 116, 1),
                   icon: Icon(
                     Icons.home_outlined,
                     color: Theme.of(context).colorScheme.primary,

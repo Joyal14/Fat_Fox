@@ -1,3 +1,4 @@
+import 'package:fatfox_app/pages/Login/otp_page.dart';
 import 'package:fatfox_app/pages/Login/registration_page.dart';
 import 'package:fatfox_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +54,11 @@ class _LoginPageState extends State<LoginPage> {
                 CustomElevatedButton(
                   context: context,
                   label: "Login",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => const OTPPage()),
+                    );
+                  },
                   color: Theme.of(context).colorScheme.primary,
                 ),
                 const SizedBox(

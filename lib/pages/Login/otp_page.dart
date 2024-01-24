@@ -130,7 +130,7 @@ class _OTPPageState extends State<OTPPage> {
                   context: context,
                   label: "Submit",
                   onPressed: () {
-                    Navigator.of(context).push(
+                    Navigator.of(context).pushReplacement(
                       MaterialPageRoute(builder: (context) => const HomePage()),
                     );
                   },
