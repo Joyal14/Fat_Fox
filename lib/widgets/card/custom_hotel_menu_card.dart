@@ -15,6 +15,7 @@ class HotelCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("build");
     return HotelMenuCard(images: images, title: title, price: price);
   }
 }
