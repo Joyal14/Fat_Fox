@@ -1,7 +1,10 @@
+import 'package:fatfox_app/provider/hotel_menu_provider.dart';
+import 'package:fatfox_app/provider/select_items_provider.dart';
 import 'package:fatfox_app/splash.dart';
 
 // import 'package:fatfox_app/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 // import 'package:fatfox_app/pages/location_page.dart';
 
 void main() {
@@ -14,14 +17,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const Splashscreen(),
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromRGBO(251, 142, 21, 1),
-          primary: const Color.fromRGBO(251, 142, 21, 1),
-          secondary: const Color.fromRGBO(139, 104, 64, 1),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => HotelMenuProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => SelectItemsList(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const Splashscreen(),
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromRGBO(251, 142, 21, 1),
+            primary: const Color.fromRGBO(251, 142, 21, 1),
+            secondary: const Color.fromRGBO(139, 104, 64, 1),
+          ),
         ),
       ),
     );
